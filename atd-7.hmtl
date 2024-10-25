@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+    <img src="51RZsdPpeQL._UF894,1000_QL80_.jpg" alt="" onclick="(mensagem('obrigado'))" ondblclick="mensagem('ai')" onmouseenter="mensagem('veio me acariciar?')" onmouseleave="mensagem('VOLTAAAAAAAAAAA')">
+
+    <script src="script.js">
+        function mensagem(msg){
+            console.log(msg);
+        }
+    </script>
+</body>
+</html>
