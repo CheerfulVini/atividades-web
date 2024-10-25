@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button onclick="geraNome()">me aperta vai</button>
+
+    <h1 id="nome"></h1>
+
+    <script>
+        const titles = ["Sr. ", "Mister ", "Dom ", "Lord ", "Lady ", "Capitão ", "Dama "];
+        const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn"];
+        const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro"];
+        const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis"];
+
+        let titulo = Math.random() * (7 - 1)
+        let nome = Math.random() * (7 - 1)
+        let classe = Math.random() * (7 - 1)
+        let local = Math.random() * (7 - 1)
+
+        let cavaleiro = document.getElementById('nome')
+        let nomeGerado = titles[(Math.floor(Math.random() * (7 - 1) + 1))]+" "+names[(Math.floor(Math.random() * (7 - 1) + 1))]+", o/a "+classes[(Math.floor(Math.random() * (7 - 1) + 1))]+" de "+locations[(Math.floor(Math.random() * (7 - 1) + 1))]
+
+        function geraNome(){
+            
+            cavaleiro.innerText = nomeGerado
+
+        }
+    </script>
+</body>
+</html>
