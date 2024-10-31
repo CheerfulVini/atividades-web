@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlugtxuw2mTIJ_KBF3ah8hOZx6h05t89NIXA&s" alt="">
+
+    <input type="text">
+    <button onclick="tecla()">envia</button>
+    <p class="m">a</p>
+    <p class="l">a</p>
+
+    <button id="claro" onclick="temaClaro()">tema claro</button>
+    <button id="escuro" onclick="temaEscuro()">tema escuro</button>
+
+    <script>
+        let input = document.querySelector('input');
+        let str = input.value;
+        let tamanho = str.length;
+        let m = document.querySelector('.m');
+        let l = document.querySelector('.l');
+
+        function temaEscuro(){
+            document.body.style.backgroundColor = "black"
+            document.body.style.color = "white"
+        }
+
+        function temaClaro(){
+            document.body.style.backgroundColor = "white"
+            document.body.style.color = "black"
+        }
+
+        function tecla(){
+            console.log("clicou")
+
+            str = input.value;
+            tamanho = str.length;
+
+            if(tamanho > 3){
+                if(str == "chocolate")
+                {
+                    l.innerText = "Eu amo sorvete de chocolate!";
+                }
+                else if(str == "flocos")
+                {
+                    l.innerText = "Ah, mas chocolate é meu favorito!";
+                }
+                else
+                {
+                    l.innerText = "Eu esperava um sabor de sorvete!";
+                }
+            }
+
+            m.innerText = "O tamanho da palavra: " + tamanho;
+        }
+
+
+        
+    </script>
+</body>
+</html>
